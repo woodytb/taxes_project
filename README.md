@@ -157,15 +157,12 @@ Steps:
 
 # 1. Clone the repo
 git clone https://github.com/woodytb/taxes_project.git
-cd handelsregister-extractor
+cd taxes_project
 
 # 2. Create the env file
 cp .env.example .env
 
-# 3. Add PDFs
-cp /path/to/pdfs/*.pdf pdfs/
-
-# 4. Start everything
+# 3. Start everything
 docker compose up --build
 Then open http://localhost:3000 in Chrome or Safari.
 
