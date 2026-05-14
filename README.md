@@ -156,7 +156,7 @@ Steps:
 
 
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/handelsregister-extractor.git
+git clone https://github.com/YOUR_USERNAME/taxes_project.git
 cd handelsregister-extractor
 
 # 2. Create the env file
