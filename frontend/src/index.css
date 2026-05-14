@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #f5f3ee;
+  color: #1b2a4a;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+@layer components {
+  .btn-gold {
+    @apply bg-gold text-navy font-semibold px-6 py-3 rounded transition-colors duration-200 hover:bg-gold-hover disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2;
+  }
+
+  .table-header {
+    @apply bg-navy text-cream text-left text-sm font-semibold uppercase tracking-wider px-4 py-3;
+  }
+
+  .table-cell {
+    @apply px-4 py-3 text-navy text-sm;
+  }
+
+  .badge-vorstand {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-navy text-gold;
+  }
+
+  .badge-prokura {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-gold-light text-navy;
+  }
+}
