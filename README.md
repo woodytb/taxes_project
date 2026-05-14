@@ -51,8 +51,8 @@ These entries are highlighted in green with a **"Keine Nachfolge"** badge. For e
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/handelsregister-extractor.git
-cd handelsregister-extractor
+git clone https://github.com/woodytb/taxes_project.git
+cd taxes_project
 ```
 
 ### 2. Configure environment
@@ -61,13 +61,7 @@ cp .env.example .env
 ```
 Edit `.env` and set a secure database password if needed.
 
-### 3. Add your PDFs
-Copy your Handelsregister PDFs into the `pdfs/` folder:
-```bash
-cp /path/to/your/pdfs/*.pdf pdfs/
-```
-
-### 4. Start the application
+### 3. Start the application
 ```bash
 docker compose up --build
 ```
@@ -148,28 +142,3 @@ docker compose logs backend -f
 # View LLM logs
 docker compose logs ollama -f
 ```
-
-## How to use
-Prerequisites: Docker Desktop — nothing else needed, no Python, no Node.js.
-
-Steps:
-
-
-# 1. Clone the repo
-git clone https://github.com/woodytb/taxes_project.git
-cd taxes_project
-
-# 2. Create the env file
-cp .env.example .env
-
-# 3. Start everything
-docker compose up --build
-Then open http://localhost:3000 in Chrome or Safari.
-
-First run takes ~5–10 minutes because Docker downloads:
-
-The qwen2.5:7b model (~4.7 GB)
-The Python, Node, Postgres, and Nginx images (~1–2 GB total)
-After that first download everything is cached locally and subsequent starts take ~30 seconds.
-
-The only gotcha: open the app in Chrome or Safari, not VS Code's built-in browser, otherwise the email buttons won't open Outlook.
