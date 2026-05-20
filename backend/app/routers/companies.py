@@ -68,6 +68,13 @@ def list_companies(
     return [_company_to_out(c) for c in companies]
 
 
+@router.delete("")
+def delete_all_companies(db: Session = Depends(get_db)):
+    db.query(Company).delete()
+    db.commit()
+    return {"deleted": True}
+
+
 @router.get("/{company_id}", response_model=CompanyDetail)
 def get_company(company_id: int, db: Session = Depends(get_db)):
     company = db.query(Company).filter(Company.id == company_id).first()

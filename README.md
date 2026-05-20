@@ -85,7 +85,21 @@ Click **"PDFs verarbeiten"**. The table fills up in real time as each document i
 - **Filters** — search by name/location, filter by register type (HRB/HRA/GnR), filter by Geschäftsführung/Prokura, show only "Keine Nachfolge" entries
 - **Expandable rows** — click any row to see the full person list with names, cities, birth dates and ages
 - **Email integration** — per-company email button + "Alle anschreiben" bulk button, opens your default mail app with a pre-filled German template
+- **Reset button** — "Daten löschen" button clears all extracted data so you can re-run the extraction from scratch (useful for demos)
 - **Fully offline** — the LLM runs locally via Ollama, no API keys required, no data sent to external services
+
+---
+
+## Updating to a new version
+
+If you already have the app running and want to pull in the latest changes:
+
+```bash
+git pull
+docker compose up --build
+```
+
+That's it. Docker rebuilds only what changed, so it's faster than the first run.
 
 ---
 

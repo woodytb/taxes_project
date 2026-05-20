@@ -18,6 +18,10 @@ export async function fetchCompany(id: number): Promise<CompanyDetail> {
   return data
 }
 
+export async function deleteAllCompanies(): Promise<void> {
+  await api.delete('/companies')
+}
+
 export async function fetchHealth(): Promise<{ status: string; db: boolean; ollama: boolean }> {
   const { data } = await api.get('/health')
   return data
